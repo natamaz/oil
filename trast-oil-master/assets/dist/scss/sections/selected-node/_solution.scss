@@ -1,0 +1,83 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.solution{
+  $block-name: &; // #{$block-name}__element
+
+  overflow: hidden;
+  padding: 50px 0;
+  background-color: #f6f6f6;
+  @media (min-width: $screen-xl) {
+    padding: 96px 0 70px;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__top{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__wrapper-img{
+    width: 100%;
+    height: 280px;
+    @media (min-width: $screen-md) {
+      width: 265px;
+      height: 280px;
+      flex-shrink: 0;
+    }
+    @media (min-width: $screen-lg) {
+      width: 680px;
+      height: 280px;
+      margin-left: -187px;
+    }
+    @media (min-width: $screen-xl) {
+      width: 1014px;
+      height: auto;
+      margin-left: -272px;
+    }
+  }
+
+  &__img{
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+    @media (min-width: $screen-xl) {
+      margin-top: -25px;
+    }
+  }
+
+  &__content{
+    margin-top: 10px;
+    p{
+      line-height: 30px;
+      font-weight: 300;
+      color: #5c5b60;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__content-box{
+    @media (min-width: $screen-md) {
+      margin-left: 25px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 612px;
+      margin-left: 10px;
+    }
+    .content-box__title{
+      @media (min-width: $screen-xl) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

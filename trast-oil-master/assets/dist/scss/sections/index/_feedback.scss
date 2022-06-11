@@ -1,0 +1,79 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.feedback {
+  $block-name: &; // #{$block-name}__element
+
+
+  padding: 50px 0;
+  color: $white;
+  background-image: url('../img/home/feedback-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #110f1f;
+  @media (min-width: $screen-xl) {
+    padding: 114px 0 109px;
+  }
+  &__inner {
+    @include container;
+  }
+
+  &__title{
+    text-align: center;
+    &:before{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__subtitle{
+    margin-top: 15px;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    @media (min-width: $screen-xl) {
+      font-size: 30px;
+    }
+  }
+
+  &__form{
+    margin-top: 20px;
+    @media (min-width: $screen-xl) {
+      margin-top: 67px;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__item{
+    width: 100%;
+    &:not(:first-child){
+      margin-top: 20px;
+      @media (min-width: $screen-md) {
+        margin-left: 20px;
+        margin-top: 0;
+      }
+      @media (min-width: $screen-xl) {
+        margin-left: 90px;
+      }
+    }
+  }
+
+  &__button-double{
+    margin: 0 auto;
+    margin-top: 40px;
+    @media (min-width: $screen-xl) {
+      margin-top: 71px;
+    }
+  }
+}

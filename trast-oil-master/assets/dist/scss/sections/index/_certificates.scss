@@ -1,0 +1,90 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.certificates {
+  $block-name: &; // #{$block-name}__element
+
+
+  padding: 50px 0;
+  overflow: hidden;
+  @media (min-width: $screen-xl) {
+    padding: 157px 0 33px;
+  }
+  &__inner {
+    @include container;
+  }
+
+  &__carousel {
+    @include ul-reset;
+    margin-top: 25px;
+    @media (min-width: 800px) {
+      margin-left: -28px;
+    }
+    @media (min-width: $screen-xl) {
+      //margin-top: 55px;
+      margin-top: 28px;
+      //margin-left: -48px;
+      margin-left: -56px;
+    }
+  }
+
+  &__item {
+    height: 420px;
+    //transform: scale(0.85);
+    transform: scale(0.79);
+    transition: $transition-time;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+      transform: scale(1.1);;
+    }
+    @media (min-width: 800px) {
+      height: auto;
+    }
+    img{
+      margin: 0 auto;
+      height: 100%;
+      @media (min-width: 800px) {
+        height: auto;
+      }
+    }
+  }
+
+
+  .slick-list{
+    padding: 25px 15px;
+    margin: 0 -15px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    @media (min-width: $screen-xl) {
+      font-size: 32px;
+    }
+
+    &--left {
+      left: -15px;
+      @media (min-width: 800px) {
+        left: -25px;
+      }
+      @media (min-width: $screen-xl) {
+        left: -30px;
+      }
+    }
+
+    &--right {
+      right: -15px;
+      @media (min-width: 800px) {
+        right: -25px;
+      }
+      @media (min-width: $screen-xl) {
+        //right: -60px;
+        right: -30px;
+      }
+    }
+  }
+}

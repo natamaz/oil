@@ -1,0 +1,58 @@
+// Подключения блоков
+//@import "../blocks/button";
+// Подключения спомогательных файлов
+//@import "../helper/animations";
+//
+// Подключения бибилиотек
+
+.footer{
+  $block-name:                &; // #{$block-name}__element
+
+
+  padding: 37px 0;
+  color: $white;
+  background-color: $colo-dark;
+  &__inner{
+    @include container;
+    @media (min-width: $screen-xl) {
+      display: flex;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__item{
+    &:last-child{
+      max-width: 265px;
+      margin: 0 auto;
+      @media (min-width: $screen-md) {
+        margin: 0;
+        max-width: 305px;
+      }
+    }
+    &:not(:first-child){
+      margin-top: 20px;
+      @media (min-width: $screen-md) {
+        margin: 0;
+      }
+      @media (min-width: $screen-xl) {
+        margin-left: 104px;
+      }
+    }
+  }
+
+  &__social{
+    margin-top: 20px;
+    @media (min-width: $screen-xl) {
+      margin-top: -6px;
+      margin-left: auto;
+    }
+  }
+}

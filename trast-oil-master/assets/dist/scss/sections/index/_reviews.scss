@@ -1,0 +1,150 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.reviews{
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 50px 0 50px;
+  background-image: url("../img/home/reviews-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 159%;
+  @media (min-width: $screen-lg) {
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 93px 0 98px;
+  }
+  @media (min-width: 1900px) {
+    background-position: top 54px right 44px;
+    background-size: auto;
+  }
+
+  &__inner{
+    @include container;
+  }
+
+  &__title{
+    @include hide-text;
+  }
+
+  &__carousel{
+    @include ul-reset;
+  }
+
+  &__item{
+    text-align: center;
+    padding-bottom: 55px;
+    outline: none;
+  }
+
+  &__wrapper-img{
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border: 5px solid #f71838;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media (min-width: $screen-xl) {
+      width: 248px;
+      height: 248px;
+      border: 10px solid #f71838;
+    }
+  }
+
+  &__img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name-company{
+    margin: 0;
+    margin-top: 20px;
+    color: $color-red-1;
+    font-weight: 500;
+    font-size: 18px;
+    @media (min-width: $screen-xl) {
+      margin-top: 47px;
+    }
+  }
+
+  &__name-client{
+    margin-top: 7px;
+    font-family: 'TacticSans-Bld';
+    color: $color-title;
+    font-size: 20px;
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__wrapper-text{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 25px 20px 25px;
+    background-color: $white;
+    box-shadow: 2.163px 6.657px 17.22px 3.78px rgba(12, 11, 13, 0.17);
+    @media (min-width: $screen-md) {
+      max-width: 520px;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 685px;
+      padding: 28px 60px 35px;
+    }
+    &:before{
+      @include pseudo;
+      right: -48px;
+      bottom: -46px;
+      z-index: -1;
+      width: 100%;
+      max-width: 600px;
+      height: 210px;
+      background-image: url('../img/home/dots.png');
+    }
+    &:after {
+      @include pseudo;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 93px;
+      height: 4px;
+      background-color: #f71838;
+    }
+  }
+
+  &__text{
+    z-index: 0;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__wrapper-navigation {
+    display: flex;
+    align-items: center;
+    max-width: 240px;
+    margin: 0 auto;
+    @media (min-width: $screen-xl) {
+      max-width: 392px;
+    }
+  }
+
+  &__arrow{
+    font-size: 25px;
+    @media (min-width: $screen-xl) {
+      margin-top: 23px;
+      font-size: 32px;
+    }
+    &--right{
+      right: 0;
+    }
+  }
+}
+

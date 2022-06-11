@@ -1,0 +1,87 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.production{
+  $block-name:                &; // #{$block-name}__element
+
+
+  overflow: hidden;
+  padding: 50px 0;
+  background-image: url('../img/home/production-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #f6f6f6;
+  background-size: cover;
+  @media (min-width: $screen-xl) {
+    padding: 63px 0 48px;
+    background-position: left bottom;
+    background-size: auto;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__row{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &:last-child{
+      flex-direction: column-reverse;
+      margin-top: 20px;
+      @media (min-width: $screen-md) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 45px;
+      }
+
+      .about-us__content-box{
+        @media (min-width: $screen-xl) {
+          max-width: 743px;
+        }
+      }
+    }
+  }
+
+  &__img-1{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    @media (min-width: $screen-md) {
+      margin: 0;
+      margin-left: 20px;
+    }
+    @media (min-width: $screen-lg) {
+      width: 400px;
+    }
+    @media (min-width: $screen-xl) {
+      width: 775px;
+      margin-right: -151px;
+      margin-top: 7px;
+    }
+  }
+
+  &__img-2{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    @media (min-width: $screen-md) {
+      margin: 0;
+      margin-right: 20px;
+    }
+    @media (min-width: $screen-lg) {
+      width: 400px;
+    }
+    @media (min-width: $screen-xl) {
+      width: 533px;
+      margin-top: 7px;
+    }
+  }
+
+}

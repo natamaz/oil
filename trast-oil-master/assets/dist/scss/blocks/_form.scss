@@ -1,0 +1,85 @@
+.form {
+  $block-name:                &; // #{$block-name}__element
+
+  width: 100%;
+
+  &__fieldset {
+    min-width: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  &__legend {
+    display: block;
+    width: 100%;
+    max-width: 100%; // Привет IE
+    margin: 0;
+    font-size: 14px;
+    font-family: $font-family;
+    font-weight: 700;
+    line-height: $line-height;
+    white-space: normal; // Привет IE
+    color: inherit;
+    &--hidden{
+      @include hide-text;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+  }
+
+  &--small{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.label {
+  display: inline-flex;
+  width: 100%;
+  &__name {
+    @include hide-text;
+  }
+}
+
+
+.input{
+  width: 100%;
+  padding: 12px 30px;
+  font: inherit;
+  font-weight: 300;
+  color: inherit;
+  background-color: $color-blue-dark;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: $transition-time;
+
+  @media (min-width: $screen-lg) {
+    padding: 12px 43px;
+  }
+
+  &:focus{
+    outline: 0;
+    border-bottom: 2px solid $color-red;
+  }
+
+  @include placeholder{
+    color: $white;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &--white{
+    background-color: $white;
+    border: 1px solid #d7d7d7;
+    height: 48px;
+    @include placeholder{
+      color: #141225;
+      font-size: 18px;
+    }
+  }
+}

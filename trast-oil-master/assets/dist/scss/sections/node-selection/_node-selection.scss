@@ -1,0 +1,28 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.node-selection{
+  $block-name: &; // #{$block-name}__element
+
+  padding: 50px 0;
+  @media (min-width: $screen-xl) {
+    padding: 70px 0 106px;
+  }
+  &__inner{
+    @include container;
+  }
+  &__search{
+    margin-top: 40px;
+    @media (min-width: $screen-xl) {
+      margin-top: 62px;
+    }
+  }
+
+  &__node{
+    margin-top: 50px;
+    @media (min-width: $screen-xl) {
+      margin-top: 97px;
+    }
+  }
+}

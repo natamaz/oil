@@ -1,0 +1,36 @@
+//selected-node
+// Подключения блоков
+@import "blocks/search";
+@import "blocks/node";
+@import "blocks/content-box";
+@import "blocks/button-arrow";
+
+// поключения библиотек
+@import "libs/slick";
+// стили шаблонов
+
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// поключения секций
+@import "sections/node-selection/node-selection";
+@import "sections/selected-node/solution";
+@import "sections/common/recommendations";
+@import "sections/index/about-us";
+@import "sections/index/reviews";
+@import "sections/index/feedback";
+
+
+//@media (min-width: $screen-sm) {}
+//@media (min-width: $screen-md) {}
+//@media (min-width: $screen-lg) {}
+//@media (min-width: $screen-xl) {}
+
+.selected-node{
+  &__node-selection{
+    @media (min-width: $screen-xl) {
+      padding-bottom: 96px;
+    }
+  }
+}

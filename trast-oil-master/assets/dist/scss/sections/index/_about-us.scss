@@ -1,0 +1,82 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+.about-us{
+  $block-name:                &; // #{$block-name}__element
+
+
+  margin-top: 70px;
+  padding: 72px 0 63px;
+  background-color: #f6f6f6;
+  background-image: url('../img/about-us/about-us-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center left;
+  @media (min-width: $screen-lg) {
+    background-position: center right;
+  }
+  @media (min-width: $screen-lg) {
+    margin-top: 137px;
+  }
+  &__inner{
+    @include container;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  &__content-box{
+
+  }
+
+  &__wrapper-img{
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 285px;
+    margin: 0 auto;
+    margin-top: -100px;
+
+    @media (min-width: $screen-lg) {
+      margin: 0;
+      margin-top: -100px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 677px;
+      height: 537px;
+      margin: 0;
+    }
+  }
+
+  &__img{
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    &:first-child{
+      top: 0;
+      left: 0;
+      width: 300px;
+      max-width: none;
+      @media (min-width: $screen-md) {
+
+      }
+      @media (min-width: $screen-xl) {
+        top: -123px;
+        left: -149px;
+        width: 745px;
+      }
+    }
+    &:last-child{
+      bottom: 0;
+      right: 0;
+      width: 230px;
+      @media (min-width: $screen-xl) {
+        width: 499px;
+      }
+    }
+  }
+}

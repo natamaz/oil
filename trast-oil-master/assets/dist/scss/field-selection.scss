@@ -1,0 +1,29 @@
+//field-selection
+// Подключения блоков
+@import "blocks/accordeon";
+@import "blocks/node";
+
+// поключения библиотек
+@import "helper/variables";
+@import "helper/mixins";
+@import "libs/jsf-radio";
+// стили шаблонов
+
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// поключения секций
+@import "sections/field-selection/field-selection";
+
+
+//@media (min-width: $screen-sm) {}
+//@media (min-width: $screen-md) {}
+//@media (min-width: $screen-lg) {}
+//@media (min-width: $screen-xl) {}
+
+.page{
+  &__main{
+    position: relative;
+  }
+}

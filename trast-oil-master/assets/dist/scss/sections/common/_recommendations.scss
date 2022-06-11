@@ -1,0 +1,139 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.recommendations{
+  $block-name: &; // #{$block-name}__element
+
+  padding: 50px 0;
+  overflow: hidden;
+  @media (min-width: $screen-xl) {
+    padding: 113px 0 62px;
+  }
+  &__inner{
+    @include container;
+  }
+  &__carousel{
+    @include ul-reset;
+    z-index: 0;
+    margin: 0 -25px;
+    margin-top: 60px;
+  }
+  &__item{
+    margin: 0 25px;
+  }
+  &__wrapper{
+    position: relative;
+    padding: 79px 20px 35px;
+    background-color: $white;
+    box-shadow: 2.163px 6.657px 17.22px 3.78px rgba(12, 11, 13, 0.17);
+    @media (min-width: $screen-md) {
+      padding: 79px 33px 35px;
+    }
+    &:after{
+      @include pseudo;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      max-width: 385px;
+      width: 100%;
+      height: 210px;
+      background-image: url('../img/common/dots.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__top{
+    position: relative;
+    z-index: 1;
+    margin-bottom: -50px;
+  }
+  &__img{
+    display: block;
+    width: 164px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  &__title{
+    max-width: 280px;
+    margin: 0 auto;
+    color: $color-red;
+    font-family: 'TacticSans-Bld';
+    text-align: center;
+    font-size: 18px;
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 31px;
+    border-top: 1px solid #d7d7d7;
+    @media (min-width: $screen-xl) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+  }
+
+  &__description{
+    margin-top: 25px;
+    color: #5c5b60;
+    font-size: 16px;
+  }
+  
+  &__text{
+    font-size: 16px;
+    color: $color-title;
+  }
+
+  &__download{
+    font-family: 'TacticSans-Bld';
+    font-size: 14px;
+    color: $color-title;
+    @include link(inherit, $color-red-hover);
+    i{
+      margin-right: 15px;
+      color: $color-red;
+      font-size: 11px;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 43%;
+    font-size: 25px;
+    @media (min-width: $screen-xl) {
+      font-size: 32px;
+    }
+
+    &--left {
+      left: -15px;
+      @media (min-width: 800px) {
+        left: -25px;
+      }
+      @media (min-width: $screen-xl) {
+        left: -48px;
+      }
+    }
+
+    &--right {
+      right: -15px;
+      @media (min-width: 800px) {
+        right: -25px;
+      }
+      @media (min-width: $screen-xl) {
+        right: -48px;
+      }
+    }
+  }
+
+  .slick-track{
+    padding-bottom: 30px;
+  }
+}
+

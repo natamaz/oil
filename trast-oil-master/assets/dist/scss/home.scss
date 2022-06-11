@@ -1,0 +1,27 @@
+// Подключения блоков
+//@import "blocks/time-flag";
+@import "blocks/content-box";
+@import "blocks/button-arrow";
+
+// поключения библиотек
+@import "libs/slick";
+// стили шаблонов
+
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// поключения секций
+@import "sections/index/main-banner";
+@import "sections/index/advantages";
+@import "sections/index/about-us";
+@import "sections/index/reviews";
+@import "sections/index/production";
+@import "sections/index/certificates";
+@import "sections/index/feedback";
+
+
+//@media (min-width: $screen-sm) {}
+//@media (min-width: $screen-md) {}
+//@media (min-width: $screen-lg) {}
+//@media (min-width: $screen-xl) {}

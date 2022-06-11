@@ -1,0 +1,23 @@
+//node-selection
+// Подключения блоков
+@import "blocks/search";
+@import "blocks/node";
+//@import "blocks/content-box";
+//@import "blocks/button-arrow";
+
+// поключения библиотек
+//@import "libs/slick";
+// стили шаблонов
+
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// поключения секций
+@import "sections/node-selection/node-selection";
+
+
+//@media (min-width: $screen-sm) {}
+//@media (min-width: $screen-md) {}
+//@media (min-width: $screen-lg) {}
+//@media (min-width: $screen-xl) {}

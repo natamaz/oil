@@ -1,0 +1,27 @@
+@import "../helper/variables";
+@import "../helper/mixins";
+
+
+.button-arrow {
+  $block-name: &; // #{$block-name}__element
+
+  padding: 0;
+  color: #d5d5d5;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transition: $transition-time;
+  cursor: pointer;
+
+  &:hover{
+    color: #6c6c6c;
+  }
+
+  &--left {
+    i{
+      &:before{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+//common-problems
+// Подключения блоков
+@import "blocks/node";
+@import "blocks/accordeon";
+@import "blocks/content-box";
+@import "blocks/button-arrow";
+// поключения библиотек
+@import "libs/slick";
+// стили шаблонов
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+// поключения секций
+@import "sections/field-selection/field-selection";
+@import "sections/selected-node/solution";
+@import "sections/common/recommendations";
+@import "sections/index/about-us";
+@import "sections/common-problems/node-carousel";
+@import "sections/index/reviews";
+@import "sections/index/feedback";
+
+
+//@media (min-width: $screen-sm) {}
+//@media (min-width: $screen-md) {}
+//@media (min-width: $screen-lg) {}
+//@media (min-width: $screen-xl) {}
+
+.common-problems {
+  &__field-selection {
+    @media (min-width: $screen-xl) {
+      padding-bottom: 38px;
+    }
+    .field-selection__accordeon {
+      @media (min-width: $screen-xl) {
+        margin-top: 68px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../helper/variables";
+@import "../helper/mixins";
+
+
+.search{
+  @include ul-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7px;
+
+  li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7px 8px;
+  }
+
+  a{
+    width: 44px;
+    padding: 4px 0 0;
+    font-size: 24px;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #b1b1b7;
+    border-radius: 5px;
+    background-color: #f1f0f5;
+    &:focus,
+    &:hover{
+      color: $white;
+      border: 1px solid $color-red;
+      background-color: $color-red;
+      outline: none;
+    }
+  }
+
+}

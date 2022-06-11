@@ -1,0 +1,84 @@
+.navigation{
+  $block-name:                &; // #{$block-name}__element
+
+
+  width: 100%;
+  @media (min-width: $screen-md) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (min-width: $screen-xl) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation__wrapper {
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-left: auto;
+      max-width: 851px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: none;
+      margin-left: 0;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 285px;
+    margin: 0 auto;
+    margin-top: 15px;
+
+    @media (min-width: $screen-md) {
+      max-width: none;
+      margin-top: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 0;
+      margin-left: 7px;
+    }
+
+    li{
+      position: relative;
+      padding: 5px 0;
+
+      &:not(:first-of-type){
+        &:before{
+          @include pseudo;
+          display: none;
+          top: 0;
+          left: 8px;
+          width: 1px;
+          height: 100%;
+          background-color: $white;
+          opacity: .5;
+          @media (min-width: $screen-md) {
+            display: block;
+          }
+          @media (min-width: $screen-xl) {
+            left: 30px;
+          }
+        }
+        @media (min-width: $screen-md) {
+          padding-left: 20px;
+        }
+
+        @media (min-width: $screen-xl) {
+          padding-left: 59px;
+        }
+      }
+      a{
+        @include link(inherit, $color-red);
+      }
+    }
+  }
+}

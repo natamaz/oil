@@ -1,0 +1,147 @@
+.popup {
+  z-index: 4;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 910px;
+  width: 100%;
+  height: 100%;
+  padding: 28px 28px;
+  padding-bottom: 83px;
+  background-color: #fff;
+  box-shadow: 2.163px 6.657px 17.22px 3.78px rgba(12, 11, 13, 0.17);
+  @media (min-width: $screen-md) {
+    max-width: 910px;
+    height: auto;
+    margin: 15px 0;
+  }
+  @media (max-height: 1000px) {
+    padding-bottom: 28px;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &--opened {
+    display: flex;
+  }
+
+  &__overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .95);
+    z-index: 3;
+    transition: .3s all;
+
+    &--opened {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__title{
+    margin-top: 15px;
+  }
+
+
+  &__content {
+    margin-top: 14px;
+    width: 100%;
+  }
+
+
+  .request{
+    &__description{
+      color: #141225;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 300;
+      @media (min-width: $screen-lg) {
+        font-size: 25px;
+      }
+      @media (min-width: $screen-xl) {
+        font-size: 30px;
+      }
+    }
+
+    &__form{
+      margin-top: 33px;
+      @media (min-width: $screen-xl) {
+        margin-top: 58px;
+      }
+    }
+
+    .label{
+      &:not(:first-child){
+        margin-top: 20px;
+        @media (min-width: $screen-xl) {
+          margin-top: 40px;
+        }
+      }
+    }
+    &__button{
+      margin: 40px auto 0;
+      @media (min-width: $screen-xl) {
+        margin: 70px auto 0;
+      }
+    }
+  }
+
+  .thanks{
+    @media (min-width: $screen-md) {
+      padding-bottom: 100px;
+    }
+    .modal__dialog{
+      height: 100%;
+      @media (min-width: $screen-md) {
+        height: auto;
+      }
+    }
+    .modal__content{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      @media (min-width: $screen-md) {
+        height: auto;
+      }
+    }
+    p{
+      margin-top: 20px;
+      color: #141225;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 300;
+      @media (min-width: $screen-lg) {
+        font-size: 25px;
+      }
+      @media (min-width: $screen-xl) {
+        font-size: 30px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,90 @@
+@import "../helper/variables";
+@import "../helper/mixins";
+
+
+.node {
+  @include ul-reset;
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:not(:last-child){
+      padding-bottom: 50px;
+      border-bottom: 1px solid #d7d7d7;
+    }
+    &:not(:first-child){
+      padding-top: 56px;
+    }
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__content {
+    margin-top: 20px;
+    padding-top: 9px;
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+      flex-basis: 60%;
+    }
+    @media (min-width: $screen-xl) {
+      margin-left: 46px;
+      margin-right: 25px;
+    }
+  }
+
+  &__wrapper-img{
+    width: 100%;
+    height: 280px;
+    box-shadow: 1.236px 3.804px 17.22px 3.78px rgba(12, 11, 13, 0.12);
+
+    @media (min-width: $screen-md) {
+      flex-basis: 37%;
+      width: 100%;
+      height: 193px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 299px;
+      height: 193px;
+    }
+  }
+
+  &__img{
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title{
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__text{
+    margin-top: 28px;
+    line-height: 24px;
+
+  }
+
+  &__button{
+    margin-top: 20px;
+    margin-left: auto;
+    flex-shrink: 0;
+    @media (min-width: $screen-md) {
+      margin-top: 35px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+    }
+  }
+}
+

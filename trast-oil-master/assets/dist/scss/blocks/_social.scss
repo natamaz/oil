@@ -1,0 +1,31 @@
+@import "../helper/mixins";
+
+.social {
+  @include ul-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item{
+    &:not(:first-child){
+      margin-left: 32px;
+    }
+  }
+  &__link{
+    padding: 5px;
+    padding-bottom: 2px;
+    font-size: 23px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-red;
+      border: 1px solid $color-red;
+    }
+  }
+
+  &__name {
+    @include hide-text;
+  }
+}

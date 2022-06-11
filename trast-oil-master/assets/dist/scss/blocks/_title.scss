@@ -1,0 +1,42 @@
+.title {
+  margin: 0;
+  font-family: 'TacticSans-Bld';
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-title;
+  @media (min-width: $screen-md) {
+    font-size: 30px;
+  }
+  @media (min-width: $screen-xl) {
+    font-size: 40px;
+    line-height: 53px;
+  }
+
+  &--line{
+    position: relative;
+    padding-top: 15px;
+    @media (min-width: $screen-xl) {
+      padding-top: 25px;
+    }
+    &:before{
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 37px;
+      height: 3px;
+      background-color: $color-red;
+    }
+  }
+
+  &--center{
+    text-align: center;
+    &:before{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--white{
+    color: $white;
+  }
+}

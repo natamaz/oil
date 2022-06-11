@@ -1,0 +1,94 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.advantages{
+  $block-name:                &; // #{$block-name}__element
+
+
+  padding: 50px 0 50px;
+  background-color: $colo-dark-2;
+  background-image: url("../img/home/advantages-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-width: $screen-xl) {
+    padding: 87px 0 84px;
+  }
+  @media (min-width: 1921px) {
+    background-size: cover;
+  }
+
+  &__inner{
+    @include container;
+  }
+
+  &__title{
+    @include hide-text;
+  }
+
+  &__list{
+    @include ul-reset;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -6px;
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item{
+    flex-basis: 330px;
+    flex-grow: 1;
+    margin: 6px;
+  }
+
+  &__value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'TacticSans-Bld';
+    color: $color-red-1;
+    font-size: 30px;
+    @media (min-width: $screen-lg) {
+      font-size: 45px;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 72px;
+    }
+    span{
+      margin-top: -5px;
+      font-family: 'TacticSans-Bld';
+      color: $color-red-1;
+      font-size: 20px;
+      @media (min-width: $screen-lg) {
+        margin-top: -15px;
+        font-size: 30px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-right: -29px;
+        padding-left: 21px;
+        font-size: 45px;
+      }
+    }
+  }
+
+  &__field{
+    max-width: 223px;
+    margin: 0 auto;
+    color: $white;
+    text-align: center;
+    font-size: 16px;
+    @media (min-width: $screen-md) {
+      margin-top: -6px;
+      font-size: 18px;
+      line-height: 31px;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: none;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+  }
+}

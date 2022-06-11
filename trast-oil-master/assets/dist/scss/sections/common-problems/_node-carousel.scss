@@ -1,0 +1,91 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.node-carousel{
+  $block-name: &; // #{$block-name}__element
+
+  padding: 50px 0;
+  overflow: hidden;
+  @media (min-width: $screen-xl) {
+    padding: 113px 0 128px;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__carousel{
+    @include ul-reset;
+    margin: 0 -15px;
+    padding: 0 25px;
+    @media (min-width: $screen-xl) {
+      margin: 0 -18px;
+    }
+  }
+
+  &__item{
+    outline: none;
+    a{
+      display: block;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        color: $color-red;
+      }
+    }
+  }
+
+  &__wrapper-img {
+    height: 180px;
+    margin: 0 15px;
+    box-shadow: 1.236px 3.804px 17.22px 3.78px rgba(12, 11, 13, 0.12);
+
+    @media (min-width: $screen-md) {
+      height: 192px;
+      margin: 0 18px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name-node{
+    margin-top: 24px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 18px;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 34%;
+    font-size: 25px;
+    @media (min-width: $screen-xl) {
+      font-size: 32px;
+    }
+
+    &--left {
+      left: 0;
+      @media (min-width: $screen-xl) {
+        left: -56px;
+      }
+    }
+
+    &--right {
+      right: 0;
+      @media (min-width: $screen-xl) {
+        right: -56px;
+      }
+    }
+  }
+}
